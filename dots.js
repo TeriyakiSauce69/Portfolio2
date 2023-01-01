@@ -137,7 +137,10 @@ function animate(){
     for (let i = 0; i < particlesArray.length; i ++){
 
 
+        if (particlesArray[i].x > canvas.width - 49 || particlesArray[i].x < 49){
+            
 
+        }
         
 
         if (particlesArray[i].x > canvas.width - 50 || particlesArray[i].x < 50) {
