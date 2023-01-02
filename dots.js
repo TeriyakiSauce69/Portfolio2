@@ -91,7 +91,7 @@ class Particle{
 }
 
 function init(){
-    for (let i = 0; i < 10; i++){
+    for (let i = 0; i < 30; i++){
         particlesArray.push(new Particle());
     }
 }
@@ -137,8 +137,15 @@ function animate(){
     for (let i = 0; i < particlesArray.length; i ++){
 
 
-        if (particlesArray[i].x > canvas.width - 49 || particlesArray[i].x < 49){
-            
+        if (particlesArray[i].x > canvas.width - 49 || particlesArray[i].x < 49 ){
+            particlesArray.splice(i, 1);
+            continue;
+
+        }
+
+        if (particlesArray[i].y > canvas.height - 49 || particlesArray[i].y < 48 ){
+            particlesArray.splice(i, 1);
+            continue;
 
         }
         
@@ -158,14 +165,11 @@ function animate(){
             particlesArray[i].color = color_array[Math.floor(Math.random() * color_array.length)]
 
             particlesArray[i].speedY = particlesArray[i].speedY * -1;
-
     }
 
-
 }
-
 
     requestAnimationFrame(animate);
 }
-
 animate();
+
