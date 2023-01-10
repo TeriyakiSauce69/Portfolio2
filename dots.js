@@ -5,7 +5,8 @@ const ctx = canvas.getContext('2d');
 const particlesArray = [];
 
 var color_array = ['AliceBlue','AntiqueWhite','Yellow','Gold', 'Purple', 'Green', 'Orange', 'Violet','Tomato', 'SteelBlue','OliveDab', 'Navy'];
-var hex_color_array = ["#FF0000", "#FFC000", "#FFFC00", "#FF0000", "#00FFFF", "#FF0000", "#41FDFE", "#FF028D", "#FE0002", "#21FC0D"]
+// var hex_color_array = ["#FF0000", "#FFC000", "#FFFC00", "#FF0000", "#00FFFF", "#FF0000", "#41FDFE", "#FF028D", "#FE0002", "#21FC0D"]
+var hex_color_array = ["#ffa69e","#4c956c","#9c89b8", "#01497c"]
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -152,7 +153,7 @@ function animate(){
 
         if (particlesArray[i].x > canvas.width - 50 || particlesArray[i].x < 50) {
 
-            particlesArray[i].color = color_array[Math.floor(Math.random() * color_array.length)]
+            //particlesArray[i].color = hex_color_array[Math.floor(Math.random() * hex_color_array)]
 
             particlesArray[i].speedX = particlesArray[i].speedX * -1;
     
@@ -162,7 +163,7 @@ function animate(){
 
         if (particlesArray[i].y > canvas.height - 50 || particlesArray[i].y < 50) {
 
-            particlesArray[i].color = color_array[Math.floor(Math.random() * color_array.length)]
+            //particlesArray[i].color = hex_color_array[Math.floor(Math.random() * hex_color_array)]
 
             particlesArray[i].speedY = particlesArray[i].speedY * -1;
     }
